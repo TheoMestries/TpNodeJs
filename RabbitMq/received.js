@@ -6,6 +6,16 @@ const knex = require('knex')(require('./knexfile').development);
 
 const { parse } = require('json2csv');
 
+const transporter = nodemailer.createTransport({
+    host: "smtp.ethereal.email",
+    port: 587,
+    secure: false,
+    auth: {
+        user: "nayeli.reinger40@ethereal.email",
+        pass: "V42mAg7zQuWjMEsSrV",
+    },
+});
+
 async function sendCSVEmail(email, csv) {
     const mailOptions = {
         from: '"Admin" <admin@example.com>',
@@ -55,15 +65,7 @@ async function generateCSV() {
 
 
 
-const transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
-    port: 587,
-    secure: false,
-    auth: {
-        user: "nayeli.reinger40@ethereal.email",
-        pass: "V42mAg7zQuWjMEsSrV",
-    },
-});
+
 
 async function getUsers() {
     return knex('user').select();

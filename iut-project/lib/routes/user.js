@@ -17,7 +17,7 @@ module.exports = [
                     firstName: Joi.string().required().min(3).example('John').description('Firstname of the user'),
                     lastName: Joi.string().required().min(3).example('Doe').description('Lastname of the user'),
                     username : Joi.string().required().example('TheTorky').description('Username of the user'),
-                    mail: Joi.string().email().required().example('ExempleCool.@cool.fr').description('Email of the user'),
+                    mail: Joi.string().email().required().example('ExempleCool.test@cool.fr').description('Email of the user'),
                     password: Joi.string().required().min(8).example('Torky98745!').description('Password of the user')
                 })
             }
@@ -31,7 +31,9 @@ module.exports = [
         method: 'GET',
         path: '/users',
         options: {
-            auth: false,
+            auth: {
+                scope: ['admin']
+            },
             tags: ['api'],
             description: 'Get List of Users',
             notes: 'Returns a list of users'
