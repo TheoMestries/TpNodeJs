@@ -116,4 +116,4 @@ Une fois que tout est configuré et en cours d'exécution, vous pouvez accéder 
 ```
 http://localhost:3000/documentation
 ```
-Cette interface utilisateur Swagger vous permettra d'interagir directement avec votre API depuis votre navigateur.
+Cette interface utilisateur Swagger vous permettra d'interagir directement avec votre API depuis votre navigateur. Et n'oubliez pas un compte Administrateur a été créer pour vous permettre d'utiliser certaine fonctionnalité , l'email étant admin@admin.com et le mot de passe Admin123 . Lorsque vous vous connectez n'oubliez pas de mettre Bearer devant votre token afin que celui-ci soit pris en compte.
