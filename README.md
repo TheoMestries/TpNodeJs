@@ -1,11 +1,11 @@
 # TpNodeJs
 
-Le projet TpNodeJs est une application Web utilisanat des technologies backend  telles que Node.js, RabbitMQ, et MySQL. Cette application sert de plateforme pour gérer un catalogue de films, permettant aux utilisateurs d'ajouter, de mettre à jour, et de consulter des informations détaillées sur différents films. De plus, elle intègre des fonctionnalités avancées telles que l'exportation de données au format CSV et la notification par e-mail, enrichissant ainsi l'expérience utilisateur et facilitant la gestion des données.
+Le projet TpNodeJs est une application Web utilisant des technologies backend  telles que Node.js, RabbitMQ, et MySQL. Cette application sert de plateforme pour gérer un catalogue de films, permettant aux utilisateurs d'ajouter, de mettre à jour, et de consulter des informations détaillées sur différents films. De plus, elle intègre des fonctionnalités avancées telles que l'exportation de données au format CSV et la notification par e-mail, enrichissant ainsi l'expérience utilisateur et facilitant la gestion des données.
 
 ## Caractéristiques Principales
 Gestion de Films : Les utilisateurs peuvent ajouter de nouveaux films au catalogue, mettre à jour les informations existantes et parcourir la collection de films disponible. Chaque film est associé à des détails tels que le titre, la description, la date de sortie, et le réalisateur.
 
-Exportation CSV : Un outil puissant permet aux administrateurs d'exporter l'ensemble du catalogue de films en un fichier CSV, envoyé directement par e-mail grâce à l'intégration avec RabbitMQ. Cela simplifie le processus d'analyse des données et leur partage.
+Exportation CSV : Un outil  permet aux administrateurs d'exporter l'ensemble du catalogue de films en un fichier CSV, envoyé directement par e-mail grâce à l'intégration avec RabbitMQ. Cela simplifie le processus d'analyse des données et leur partage.
 
 Authentification et Autorisation : Le système d'authentification sécurise l'accès à certaines fonctionnalités, distinguant les rôles entre les utilisateurs normaux et les administrateurs.
 
@@ -20,9 +20,9 @@ Documentation Swagger : L'API est entièrement documentée avec Swagger, offrant
 ## Technologies Utilisées
 Node.js : Choisi pour sa performance et sa facilité d'utilisation dans la construction d'applications réseau rapides et scalables.
 
-RabbitMQ : Un broker de messages avancé qui facilite le traitement asynchrone des tâches, améliorant la réactivité et l'efficacité de l'application.
+RabbitMQ : Un broker de messages  qui facilite le traitement asynchrone des tâches, améliorant la réactivité et l'efficacité de l'application.
 
-MySQL : Une base de données relationnelle robuste utilisée pour stocker et gérer les informations sur les films de manière structurée.
+MySQL : Une base de données relationnelle utilisée pour stocker et gérer les informations sur les films de manière structurée.
 
 Docker : Utilisé pour containeriser et déployer l'application et ses services de manière isolée, garantissant ainsi la cohérence des environnements de développement, de test, et de production.
 
