@@ -1,6 +1,6 @@
 # TpNodeJs
 
-Le projet TpNodeJs est une application Web innovante développée pour démontrer l'intégration efficace de technologies backend modernes telles que Node.js, RabbitMQ, et MySQL. Cette application sert de plateforme pour gérer un catalogue de films, permettant aux utilisateurs d'ajouter, de mettre à jour, et de consulter des informations détaillées sur différents films. De plus, elle intègre des fonctionnalités avancées telles que l'exportation de données au format CSV et la notification par e-mail, enrichissant ainsi l'expérience utilisateur et facilitant la gestion des données.
+Le projet TpNodeJs est une application Web utilisanat des technologies backend  telles que Node.js, RabbitMQ, et MySQL. Cette application sert de plateforme pour gérer un catalogue de films, permettant aux utilisateurs d'ajouter, de mettre à jour, et de consulter des informations détaillées sur différents films. De plus, elle intègre des fonctionnalités avancées telles que l'exportation de données au format CSV et la notification par e-mail, enrichissant ainsi l'expérience utilisateur et facilitant la gestion des données.
 
 ## Caractéristiques Principales
 Gestion de Films : Les utilisateurs peuvent ajouter de nouveaux films au catalogue, mettre à jour les informations existantes et parcourir la collection de films disponible. Chaque film est associé à des détails tels que le titre, la description, la date de sortie, et le réalisateur.
@@ -8,6 +8,7 @@ Gestion de Films : Les utilisateurs peuvent ajouter de nouveaux films au catalog
 Exportation CSV : Un outil puissant permet aux administrateurs d'exporter l'ensemble du catalogue de films en un fichier CSV, envoyé directement par e-mail grâce à l'intégration avec RabbitMQ. Cela simplifie le processus d'analyse des données et leur partage.
 
 Authentification et Autorisation : Le système d'authentification sécurise l'accès à certaines fonctionnalités, distinguant les rôles entre les utilisateurs normaux et les administrateurs.
+
 Gestion des Favoris : Les utilisateurs peuvent marquer des films comme favoris, permettant une récupération rapide et personnalisée de leur liste de films préférés.
 
 Notifications par E-mail : Le système utilise RabbitMQ pour déclencher l'envoi de notifications par e-mail aux utilisateurs pour divers événements, tels que l'ajout de nouveaux films ou les mises à jour des films existants, ainsi que pour l'envoi de l'exportation CSV aux administrateurs.
@@ -32,7 +33,9 @@ Ce guide vous expliquera comment configurer et exécuter le projet TpNodeJs, qui
 Avant de commencer, assurez-vous d'avoir installé sur votre système :
 
 Docker
+
 Node.js
+
 npm (gestionnaire de paquets pour Node.js)
 
 ## Cloner le Répertoire
@@ -66,7 +69,6 @@ Cette commande exécute un conteneur MySQL avec une base de données pré-créé
 ### iut-project
 Naviguez vers le répertoire iut-project et installez les dépendances Node.js :
 ```
-
 cd iut-project
 npm install
 ```
@@ -78,10 +80,10 @@ npm start
 ```
 
 ### Consommateur RabbitMQ
-Naviguez vers le répertoire RabbitMq :
+Ouvrez un nouveau terminal dans le projet et naviguez vers le répertoire RabbitMq :
 
 ```
-cd ../RabbitMq
+cd RabbitMq
 ```
 
 Installez les dépendances Node.js nécessaires :
@@ -90,7 +92,7 @@ Installez les dépendances Node.js nécessaires :
 npm install
 ```
 
-Avant d'exécuter le consommateur RabbitMQ, mettez à jour la configuration du transporter dans received.js avec vos détails d'email Ethereal :
+Avant d'exécuter le consommateur RabbitMQ, mettez à jour la configuration du transporter dans received.js avec vos détails d'email Ethereal (https://ethereal.email/) :
 
 ```
 const transporter = nodemailer.createTransport({
@@ -103,7 +105,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 ```
-Assurez-vous de remplacer "votre_utilisateur_ethereal" et "votre_mot_de_passe_ethereal" par vos véritables identifiants d'email Ethereal.
+Assurez-vous de remplacer "votre_utilisateur_ethereal" et "votre_mot_de_passe_ethereal" par vos véritables identifiants d'email Ethereal que vous obtenez en appuyant sur le bouton "CREATE ETHEREAL ACCOUNT"
 
 Exécutez le consommateur RabbitMQ :
 
